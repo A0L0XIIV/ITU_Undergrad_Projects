@@ -1,0 +1,206 @@
+N = 10
+
+1. 156419 nanoseconds.
+2. 152313 nanoseconds.
+3. 156007 nanoseconds.
+4. 153545 nanoseconds.
+5. 153545 nanoseconds.
+6. 169145 nanoseconds.
+7. 149850 nanoseconds.
+8. 153544 nanoseconds.
+9. 150670 nanoseconds.
+10.159292 nanoseconds.
+Average = 155433 ns
+
+N = 100
+
+1. 2214900 nanoseconds.
+2. 2218595 nanoseconds.
+3. 2207100 nanoseconds.
+4. 2261292 nanoseconds.
+5. 2240354 nanoseconds.
+6. 2333959 nanoseconds.
+7. 2228448 nanoseconds.
+8. 2211616 nanoseconds.
+9. 2331905 nanoseconds.
+10.2240354 nanoseconds.
+Average = 2248852.3 ns
+
+N = 1000
+
+1. 44304567 nanoseconds.
+2. 44264333 nanoseconds.
+3. 42574111 nanoseconds.
+4. 45814969 nanoseconds.
+5. 43598837 nanoseconds.
+6. 41681583 nanoseconds.
+7. 43102075 nanoseconds.
+8. 42704256 nanoseconds.
+9. 42366785 nanoseconds.
+10.42391419 nanoseconds.
+Average = 43280293.5 ns
+
+N = 10000
+
+1. 713745435 nanoseconds.
+2. 710636775 nanoseconds.
+3. 705008999 nanoseconds.
+4. 709628882 nanoseconds.
+5. 701725446 nanoseconds.
+6. 717297896 nanoseconds.
+7. 711981315 nanoseconds.
+8. 707775263 nanoseconds.
+9. 729653301 nanoseconds.
+10.712414442 nanoseconds.
+Average = 711986775.4 ns
+
+N = 100000
+
+1. 9998538864 nanoseconds.
+2. 9847431373 nanoseconds.
+3. 9830114510 nanoseconds.
+4. 9762085677 nanoseconds.
+5. 9879535310 nanoseconds.
+6. 9865521706 nanoseconds.
+7. 9831696346 nanoseconds.
+8. 9853215977 nanoseconds.
+9. 9894270245 nanoseconds.
+10.9881496903 nanoseconds.
+Average = 9864390691.1 ns
+
+N = 500000
+
+1. 62264656931 nanoseconds.
+2. 62510915618 nanoseconds.
+3. 62473075110 nanoseconds.
+4. 62316047535 nanoseconds.
+5. 62507054425 nanoseconds.
+6. 65048414961 nanoseconds.
+7. 62675197144 nanoseconds.
+8. 62735865284 nanoseconds.
+9. 63438940198 nanoseconds.
+10.62672317980 nanoseconds.
+Average = 62864248518.6 ns
+
+N = 1000000
+
+1. 138872147521 nanoseconds.
+2. 142297856617 nanoseconds.
+3. 138143475837 nanoseconds.
+4. 137827167605 nanoseconds.
+5. 138534734310 nanoseconds.
+6. 137646938389 nanoseconds.
+7. 137891664504 nanoseconds.
+8. 137756525641 nanoseconds.
+9. 138326167513 nanoseconds.
+10.138569564689 nanoseconds.
+Average = 138586624263 ns
+
+WORST CASE:
+
+N = 10
+
+1. 244686 nanoseconds.
+2. 243455 nanoseconds.
+3. 243454 nanoseconds.
+4. 242223 nanoseconds.
+5. 238117 nanoseconds.
+6. 238528 nanoseconds.
+7. 254949 nanoseconds.
+8. 244275 nanoseconds.
+9. 305447 nanoseconds.
+10. 250433 nanoseconds.
+Average = 250556.7 ns
+
+N = 100
+
+1. 8723709 nanoseconds.
+2. 8300025 nanoseconds.
+3. 8570574 nanoseconds.
+4. 8272928 nanoseconds.
+5. 9630606 nanoseconds.
+6. 9675356 nanoseconds.
+7. 9235660 nanoseconds.
+8. 9419175 nanoseconds.
+9. 9419175 nanoseconds.
+10.8214630 nanoseconds.
+Average = 8946183.8 ns
+
+N = 1000
+
+1. 686306951 nanoseconds.
+2. 711402855 nanoseconds.
+3. 730010067 nanoseconds.
+4. 722209267 nanoseconds.
+5. 749444530 nanoseconds.
+6. 719475026 nanoseconds.
+7. 706984961 nanoseconds.
+8. 759552192 nanoseconds.
+9. 735287235 nanoseconds.
+10.727295121 nanoseconds.
+Average = 724796820.5 ns
+
+N = 10000
+
+1. 
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+Average = 
+
+N = 100000
+
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+Average = 
+
+N = 500000
+
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+Average = 
+
+N = 1000000
+
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+Average = 
+
+
+
+
+
+
+
+
+
