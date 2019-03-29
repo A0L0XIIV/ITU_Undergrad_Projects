@@ -1,0 +1,35 @@
+data1000.txt
+
+- 44017600 nanoseconds.
+- 44030400 nanoseconds.
+- 44016000 nanoseconds.
+- 43530700 nanoseconds.
+- 16.9115
+- 37953
+
+data5000.txt
+
+- 547966700 nanoseconds.
+- 550512100 nanoseconds.
+- 550950100 nanoseconds.
+- 550626600 nanoseconds.
+- 37.3631
+- 274457
+
+data10000.txt
+
+- 1804497800 nanoseconds.
+- 1805189700 nanoseconds.
+- 1789779300 nanoseconds.
+- 1780081000 nanoseconds.
+- 30.2655
+- 613972
+
+data25000.txt
+
+- 7275643400 nanoseconds.
+- 7272807300 nanoseconds.
+- 7244920900 nanoseconds.
+- 7268265400 nanoseconds.
+- 0
+- 434996
