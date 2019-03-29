@@ -1,0 +1,66 @@
+1) prog1
+
+	Parent: My process ID: 2594
+	Parent: My child's process ID: 2595
+		Child: My process ID: 2595
+		Child: My parent's process ID: 2594
+	Parent: Teminating...
+
+
+2) prog1.2 (modified)
+
+	Parent: My process ID: 2874
+	Parent: My parent's process ID: 2555
+	Parent: My child's process ID: 2875
+		Child: My process ID: 2875
+		Child: My parent's process ID: 2874
+	Parent: Teminating...
+
+3) prog1.3 (modified V2)
+
+	Parent: My process ID: 2918
+	Parent: My child's process ID: 2919
+	Parent: Teminating...
+
+		Child: My process ID: 2919
+		Child: My parent's process ID: 1215
+
+4) prog1.4 (modified V3)
+
+	Parent: My process ID: 2991
+	Parent: My child's process ID: 2992
+		Child: My process ID: 2992
+		Child: My parent's process ID: 2991
+		Number before: 5
+		Number after: 8
+	Parent: Teminating...
+		Number before: 5
+		Number after: 2
+5) prog1.5 (modified V4)
+
+	pointer's integer (*ptr): 5
+	pointer's value (ptr): 0x7ffd3fdb7ca8
+	Parent: My process ID: 18788
+	Parent: My child's process ID: 18789
+		Child: My process ID: 18789
+		Child: My parent's process ID: 18788
+		pointer's integer (*ptr): 8
+		pointer's value (ptr): 0x7ffd3fdb7ca8
+	Parent: Teminating...
+	pointer's integer (*ptr): 2
+	pointer's value (ptr): 0x7ffd3fdb7ca8
+
+6) p1
+
+	0: Value= 1
+	1: Value= 1
+	2: Value= 1
+	Main: Created 3 procs.
+
+p2
+
+	main():created 3 threads.
+	2: Value= 1
+	1: Value= 2
+	0: Value= 3
+	
