@@ -1,0 +1,38 @@
+a)
+
+Quadratic interpolants are more accurate because they can fit to data points better than the linear interpolation.
+
+With linear interpolation P(12) = 100.1428
+
+Quadratic with (21,50)
+>> x = [7,14,21];
+>> Y = [98,101,50];
+>> polyfit(x,Y,2)
+
+ans =
+
+   -0.5510   12.0000   41.0000
+
+P1(x) = -0.551x^2 + 12x + 41
+P1(12) = 105.656
+
+Quadratic with (0,100)
+>> x = [0,7,14]
+>> y = [100,98,101];
+>> polyfit(x,y,2)
+
+ans =
+
+    0.0510   -0.6429  100.0000
+
+P2(x) = 0.051x^2 - 0.6429x + 100
+P2(12) = 99.5992
+
+
+b)
+
+plot(P1)
+
+plot(P2)
+
+The second function (P2) is much better than the first one. It fits more then the P1 function.
