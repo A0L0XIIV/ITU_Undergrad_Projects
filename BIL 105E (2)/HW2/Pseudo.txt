@@ -1,0 +1,79 @@
+int main{
+	scanf "selection"
+	scanf "seed"
+	scanf "num_sample"
+
+	if selection equals to 1{
+		for( i=0; i < num_sample; i++){
+			call midprng function with seed
+			call take_sample function with seed and counters
+		}
+
+		print "1..100"
+		call print_histogram function with counter1_100 and num_sample
+	}
+	else if selection equals to 2{
+		if seed mod 2 equals to 0 or seed mod 5 equals to 0{
+			print "try again"
+			return main
+		}
+		else{
+			for( i=0; i < num_sample; i++){
+				call lsdprng funciton with seed
+				call take_sample function with seed and counters
+			}
+
+			print "1..100"
+			call print_histogram function with counter1_100 and num_sample
+		}
+	
+	else (selection not equals to 1 or 2){
+		print "wrong selection"
+		return main
+		}
+
+}end of main
+
+void midprng (seed){
+	if seed square / 10^7 >= 100 --> 10 digits
+		*seed = ((*seed)^2 / 1000) % 10^5
+
+	else if 10 <= (seed square / 10^7) < 100 --> 9 digits
+		*seed = ((*seed)^2 / 100) % 10^5
+
+	else if 1 <= (seed square / 10^7) < 10 --> 8 digits
+		*seed = ((*seed)^2 / 10) % 10^5
+
+	else if 0 <= (seed square / 10^7) < 1 --> 7 digits
+		*seed = (*seed)^2) % 10^5
+}end of midprng function
+
+void lsdprng(seed){
+	seed = (seed*73) % 10^5
+}end of lsdprng function
+
+void print_histogram(seed, num_sample){
+	percent = (seed * 100) / num_sample
+	print "seed"
+	for( i=0; i<percent; i++){
+		print "*"
+	print "percent"
+}end of print_histogram function
+
+void take_sample(seed, counters){
+	if( (seed % 500) + 1 >= 1 and (seed % 500) + 1 <= 100 )
+		increase counter1_100 1
+	
+	else if( (seed % 500) + 1 >= 101 and (seed % 500) + 1 <= 200 )
+		increase counter101_200 1
+
+	else if( (seed % 500) + 1 >= 201 and (seed % 500) + 1 <= 300 )
+		increase counter201_300 1
+	
+	else if( (seed % 500) + 1 >= 301 and (seed % 500) + 1 <= 400 )
+		increase counter301_400 1
+
+	else if( (seed % 500) + 1 >= 401 and (seed % 500) + 1 <= 500 )
+		increase counter401_500 1
+
+}end of take_sample function
