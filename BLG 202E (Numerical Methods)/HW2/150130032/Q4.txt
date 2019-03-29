@@ -1,0 +1,13 @@
+imread('.../sample.png')
+figure(1)
+X = sample;
+image(X);
+
+>> figure(2)
+>> r=80;
+>> X = double(X);
+>> [U,S,V] = svd(X);
+>> figure(2)
+>> imshow(uint8(U(:,1:r)*S(1:r,1:r)*V(:,1:r)'))
+
+(k~80) Between k=70-90 picture is looking better than other k values.

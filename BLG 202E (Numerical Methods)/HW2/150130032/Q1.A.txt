@@ -1,0 +1,16 @@
+1.a)        
+>> x = 2;
+>> Es = 1;
+>> Ea = 100;
+>> xold =  x;
+>> n = 0;
+>> while Ea > Es
+x = 10 / (x^3 - 1);
+Ea = abs((x-xold)/x)*100;
+xold = x;
+n = n + 1;
+end
+
+Program cannot calculate this iteration.
+
+Not comverge

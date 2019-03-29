@@ -1,0 +1,62 @@
+4)
+>> load('D:\Courses\BLG 202E\HW2\A.mat')
+>> B = A'*A
+
+B =
+
+   1.0e+03 *
+
+    2.3887    1.9896
+    1.9896    2.5580
+
+>> d=1;
+>> start=[1;1;];
+>> x=start;
+>> n=10;
+>> tolerans=1/100;
+>> while d>tolerans
+y=A*x
+d=abs(norm(x)-n);
+n=norm(x)
+x=y/n
+pause
+end
+
+>> [ve,ei]=eig(B)
+
+ve =
+
+   -0.7220    0.6919
+    0.6919    0.7220
+
+
+ei =
+
+   1.0e+03 *
+
+    0.4820         0
+         0    4.4647
+
+
+
+With function:
+
+function [vec,value]=power(start,A,toler)
+
+dd=1;
+x=start;
+n=10;
+while dd> toler
+y=A*x
+dd=abs(norm(x)-n);
+n=norm(x)
+x=y/n
+pause
+end
+vec=x;
+value=n;
+
+[ v3 e3 ]=power(v1,A,1/10)
+
+
+>> [ve,ei]=eig(B)

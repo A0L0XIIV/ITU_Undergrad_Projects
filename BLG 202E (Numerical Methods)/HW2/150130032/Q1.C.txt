@@ -1,0 +1,25 @@
+1.c) 
+>> x = 1.8;
+>> Es = 0.1;
+>> Ea = 1000;
+>> xold = x;
+>> n = 0;
+>> while Ea > Es
+x = (10 + x)^0.5 / x;
+Ea = abs((x-xold)/x)*100;
+xold = x;
+n = n + 1;
+end
+>> n
+
+n =
+
+    51
+
+>> x
+
+x =
+
+    1.8565
+
+Converge
