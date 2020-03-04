@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct Students{
+	int ID;
+	char name[50];
+	float grade1, grade2, grade;
+}student;
+
+int main(){
+	
+	int i, n;
+	float total = 0;
+	float average = 0;
+	
+	struct Students s[100];
+	
+	printf("Enter student number: ");
+	scanf("%d", &n );
+	
+	for( i = 1; i <= n; i++ ){
+
+		printf("Enter student ID, Name, grade1 and grade2: ");
+		scanf("%d %s %f %f",&s[i].ID, &s[i].name, &s[i].grade1, &s[i].grade2);
+		s[i].grade = 0.4 * (s[i].grade1) + 0.6 * (s[i].grade2);
+		total += (0.4 * (s[i].grade1) + 0.6 * (s[i].grade2));
+		average = total / n;
+	}
+	
+	printf("\n\n");
+	printf("Average = %.2f\n\n", average);
+	printf("Passed:\n\n");
+	for( i = 1; i <= n; i++ ){
+		if( s[i].grade > average ){
+			printf("%5d %10s %3.2f\n",s[i].ID, s[i].name, s[i].grade);
+		}
+	}
+	printf("\n");
+	printf("Failed:\n\n");
+	for( i = 1; i <= n; i++ ){
+		if( s[i].grade < average ){
+			printf("%5d %10s %3.2f\n",s[i].ID, s[i].name, s[i].grade);
+		}
+	}	
+	
+	return 0;
+}
+
