@@ -1,0 +1,54 @@
+SetupP1		bis.b		#0FFh,&P1DIR
+	
+		bit.b		#000h,&P2DIR
+			
+ReadS		bit.b		#004h,&P2IN
+		jnz		ON
+		jmp		ReadS
+ON		bit.b		#004h,&P2IN
+		jnz		ON
+		xor.b		#005h,&P1OUT
+		jmp	 	ReadS
+
+------------
+		clr.w		R14
+SetupP1		bis.b		#0FFh,&P1DIR
+		
+		bit.b		#000h,&P2DIR
+			
+ReadS		bit.b		#004h,&P2IN
+		jnz		ON
+		jmp		ReadS
+ON		bit.b		#004h,&P2IN
+		jnz		ON
+
+
+		inc.b		R14
+		mov.b		R14,&P1OUT
+		;xor.b		#005h,&P1OUT
+		jmp	 		ReadS
+
+
+----------
+			clr.w		R14
+SetupP1		bis.b		#0FFh,&P1DIR
+			;bic.b		#0FFh,&P1OUT
+			bit.b		#000h,&P2DIR
+			;bic.b		#0FFh,&P2IN
+
+ReadS		bit.b		#008h,&P2IN
+			jnz			RESE
+			bit.b		#004h,&P2IN
+			jnz			ON
+			jmp			ReadS
+ON			bit.b		#004h,&P2IN
+			jnz			ON
+
+
+			inc.b		R14
+			mov.b		R14,&P1OUT
+			;xor.b		#005h,&P1OUT
+			jmp	 		ReadS
+RESE		clr.b		R14
+			mov.b		R14,&P1OUT
+			jmp			ReadS
