@@ -1,0 +1,66 @@
+sets
+i        inputs  /I1*I4/
+j        costpulp  /J1,J2/
+k        grade   /K1*K3/
+m        method  /M1,M2/
+
+parameters
+DE(k)     demands
+/
+K1       500
+K2       500
+K3       600/
+
+table    C(i,j)  costcontent
+         J1      J2
+I1       5       15
+I2       6       20
+I3       8       30
+I4       10      40;
+
+table    M(m,j)  methodcostpulp
+         J1      J2
+M1       20      90
+M2       15      80;
+
+positive variables
+U(i)     tons of inputs i
+D(i)     tons of inputs de-ink i
+A(i)     tons of inputs asphalt i
+P(i)     tons of pulp i produce
+T(i,k)   tons of pulp i grade;
+
+variables
+Z        total cost;
+
+equations
+obj      total cost
+inplim(i)input limit
+delim(i) de-ink limit
+aslim(i) asphalt limit
+pursup(i)total purschase suply
+plm(i,k) pulp limit i k
+dem(i,k) demands i k;
+
+obj..    Z =e= 5*U(1) + 6*U(2) + 8*U(3) + 10*U(4) + 20*(D(1)+D(2)+D(3)+D(4)) + 15*(A(1)+A(2)+A(3)+A(4));
+inplim(i)..   D(i) + A(i) =l= U(i);
+delim(i)..       D(1) + D(2) +D(3) + D(4) =l= 3000;
+aslim(i)..       A(1) + A(2) + A(3) + A(4) =l= 3000;
+pursup(1)..      0.15*0.9*D(1) + 0.15*0.8*A(1) =l= P(1);
+pursup(2)..      0.2*0.9*D(2) + 0.2*0.8*A(2) =l= P(2);
+pursup(3)..      0.3*0.9*D(3) + 0.3*0.8*A(3) =l= P(3);
+pursup(4)..      0.4*0.9*D(4) + 0.4*0.8*A(4) =l= P(4);
+plm(1,k)..       T(1,2) + T(1,3) =l= P(1);
+plm(2,k)..       T(2,2) + T(2,3) =l= P(2);
+plm(3,k)..       T(3,1) + T(3,3) =l= P(3);
+plm(4,k)..       T(4,1) + T(4,2) =l= P(4);
+dem(i,1)..       T(3,1) + T(4,1) =g= 500;
+dem(i,2)..       T(1,2) + T(2,2) + T(4,2) =g= 500;
+dem(i,3)..       T(1,3) + T(2,3) + T(3,3) =g= 600;
+
+model recycling /all/;
+solve recycling using lp minimizing Z;
+
+
+
+
