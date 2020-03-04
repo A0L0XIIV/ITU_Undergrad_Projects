@@ -1,0 +1,10 @@
+
+	Classroom License -- for classroom instructional use only.
+
+>> [y, Fs] = audioread('D:\Courses\BLG 354E\HW\HW1\A.wav');
+>> Dif = zeros(size(y,1),2);
+>> for i=1:size(y,1)
+Dif(i,:)=exp(y(i,:))/(2.5);
+end
+>> audiowrite('D:\Courses\BLG 354E\HW\HW1\B.wav', Dif, Fs);
+>> 

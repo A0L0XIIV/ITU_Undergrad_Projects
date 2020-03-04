@@ -1,0 +1,34 @@
+>> [yi, Fsi] = audioread('D:\Courses\BLG 354E\HW\HW2\input.wav');
+>> [y1, Fs1] = audioread('D:\Courses\BLG 354E\HW\HW2\h1.wav');
+>> [y2, Fs2] = audioread('D:\Courses\BLG 354E\HW\HW2\h2.wav');
+>> [y3, Fs3] = audioread('D:\Courses\BLG 354E\HW\HW2\h3.wav');
+>>
+>> y1out = zeros( (size(y1,1))+size(yi,1)) ,(size(y1,2))+size(yi,2)) );
+>> y1 = flipud(y1);
+>> for i=0:size((y1+yi),1)
+if(i==0)
+y1out(i,:)=y1(i,:)*yi(i,:);
+end
+y1out(i,:)=y1(i,:)*yi(i,:)+y1out(i-1,:);
+end
+>> audiowrite('D:\Courses\BLG 354E\HW\HW2\y1.wav', y1out, Fs1);
+>>
+>> y2out = zeros( (size(y2,1))+size(yi,1)) ,(size(y2,2))+size(yi,2)) );
+>> y2 = flipud(y2);
+>> for i=0:size((y2+yi),1)
+if(i==0)
+y2out(i,:)=y2(i,:)*yi(i,:);
+end
+y2out(i,:)=y2(i,:)*yi(i,:)+y2out(i-1,:);
+end
+>> audiowrite('D:\Courses\BLG 354E\HW\HW2\y1.wav', y2out, Fs2);
+>>
+>> y3out = zeros( (size(y3,1))+size(yi,1)) ,(size(y3,2))+size(yi,2)) );
+>> y3 = flipud(y3);
+>> for i=0:size((y3+yi),1)
+if(i==0)
+y3out(i,:)=y3(i,:)*yi(i,:);
+end
+y3out(i,:)=y3(i,:)*yi(i,:)+y3out(i-1,:);
+end
+>> audiowrite('D:\Courses\BLG 354E\HW\HW2\y1.wav', y3out, Fs3);

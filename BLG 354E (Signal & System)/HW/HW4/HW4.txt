@@ -1,0 +1,52 @@
+1.a)
+function AK [K,N;P]
+>>OMG = 2*pi/K;
+>>A = exp(-j*x*pi/5*K);
+>>B = exp(-j*x*OMG*K);
+>>a_k = 1/k*((sum(A,N)+ sum(B,N+1));
+>> plot(a_k,K);
+end
+
+1.b)
+>>A = AK[10,1,2];
+
+2)
+>>OMG = 2*pi/7;
+>>T = 2*pi/OMG;
+>>A = exp(-j*x*OMG*k);
+>>a_k = 1/T*((sum(A,T));
+
+3.a)
+In Report
+
+3.b)
+>> x_t = 0;
+>> A = a(k)* exp(j*k*W*t)
+for k = -100:100
+>>x_t + A;
+end
+
+3.c)
+-
+
+4.i)
+>>k = 1:10;
+for k = 1:10
+>>a(k)=1/(2*j*k*pi) * (1 + 2*exp(-j*k*pi) - 3*exp(-j*k*(4*pi/3)));
+end
+
+4.ii)
+for k = 1:50
+>>a(k)=1/(2*j*k*pi) * (1 + 2*exp(-j*k*pi) - 3*exp(-j*k*(4*pi/3)));
+end
+
+4.iii)
+for k = 1:100
+>>a(k)=1/(2*j*k*pi) * (1 + 2*exp(-j*k*pi) - 3*exp(-j*k*(4*pi/3)));
+end
+
+4.iv)
+for k = 1:200
+>>a(k)=1/(2*j*k*pi) * (1 + 2*exp(-j*k*pi) - 3*exp(-j*k*(4*pi/3)));
+end
+

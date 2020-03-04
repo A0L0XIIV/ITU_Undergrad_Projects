@@ -1,0 +1,28 @@
+a)
+
+>> t = [0:10];
+>> c = exp(j*2*pi);
+>> a = 1 + j*2*pi;
+>> x = c*exp(a*t);
+>> plot(x);
+
+b)
+
+>> d = exp(j*4*pi);
+>> b = 1 + j*4*pi;
+>> y = d*exp(b*t);
+>> plot(y);
+
+c)
+
+>> e = exp(j*2*pi);
+>> f = 1 + j*(-2*pi);
+>> w = e*exp(f*t);
+>> plot(w);
+
+d)
+
+>> g = exp(j*2*pi);
+>> h = -1 + exp(2*pi);
+>> z = g*exp(h*t);
+>> plot(z);

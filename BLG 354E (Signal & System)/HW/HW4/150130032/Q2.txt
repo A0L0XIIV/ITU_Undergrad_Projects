@@ -1,0 +1,5 @@
+>>OMG = 2*pi/7;
+>>T = 2*pi/OMG;
+>>A = exp(-j*x*OMG*k);
+>>a_k = 1/T*((sum(A,T));
+

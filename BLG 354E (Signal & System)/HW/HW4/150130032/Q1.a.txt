@@ -1,0 +1,7 @@
+function AK [K,N;P]
+>>OMG = 2*pi/K;
+>>A = exp(-j*x*pi/5*K);
+>>B = exp(-j*x*OMG*K);
+>>a_k = 1/k*((sum(A,N)+ sum(B,N+1));
+>> plot(a_k,K);
+end
