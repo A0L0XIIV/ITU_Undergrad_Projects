@@ -1,0 +1,59 @@
+		ORG   $1000
+		DAT	$01, $03, $07, $0F, $1F, $3F, $7F, $FF
+		
+		ORG	$1020
+START  	YAZ   $00, <YÖNLEN.A>
+		YAZ   $FF, <YÖNLEN.B>
+		LDA	SK, $1000
+REW    	LDA   A, <ÝSKELE.A>
+		LDA	CD, 0
+		YAZ   A, <$2000>
+		AND   A, $07
+LOOP		DEC	A
+		INC	D
+		CMP	A, $00
+		BEQ	LIGHT
+		JMP	LOOP
+LIGHT		LDA	B, <SK+CD+0>     
+	  	YAZ   B, <ÝSKELE.B>  
+		LDA   A, <$2000>     
+		AND   A, $18         
+		MOV   D, A           
+		LDA   A, <$2000>     
+		AND   A, $E0         
+		LSR   A 
+		LSR   A 
+		LSR   A             
+		LSR   A              
+		LSR   A
+		INC	A              
+SHRO   	BSR	DELAY
+		CMP   D, $00         
+		BEQ   RIRO           
+		BRA   RRC            
+RIRO   	ROR   B              
+RRC    	CMP   D, $08         
+		BEQ   LERO           
+		BRA   LRC            
+LERO   	ROL   B              
+LRC    	CMP   D, $10         
+		BEQ   RISH           
+		BRA   RSC            
+RISH   	LSR   B              
+RSC    	CMP   D, $18         
+		BEQ   LESH           
+		BRA   LSC            
+LESH   	LSL   B              
+LSC    	YAZ   B, <ÝSKELE.B>  
+		DEC   A
+		CMP 	A, $00             
+		BNE   SHRO           
+		KES           
+
+DELAY		LDA	C, 5
+DECC		LDA	SK, $4E20
+DECX		DEC	SK
+		BNE	DECX
+		DEC	C
+		BNE	DECC
+		RTS

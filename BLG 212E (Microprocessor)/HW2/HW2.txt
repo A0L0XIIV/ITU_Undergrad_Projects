@@ -1,0 +1,73 @@
+		ORG   $1000
+START  		YAZ   $00, <YÖNLEN.A>
+		YAZ   $FF, <YÖNLEN.B>
+REW    		LDA   A, <ÝSKELE.A>
+		YAZ   A, <$2000>
+		AND   A, $07
+		CMP   A, $07
+		BEQ   EIGHT
+		BRA   EC
+EIGHT  		LDA   B, $FF
+EC     		CMP   A, $06
+		BEQ   SEVEN
+		BRA   SEC
+SEVEN  		LDA   B, $7F
+SEC    		CMP   A, $05
+		BEQ   SIX
+		BRA   SC
+SIX    		LDA   B, $3F
+SC     		CMP   A, $04
+		BEQ   FIVE
+		BRA   FIC            
+FIVE   		LDA   B, $1F         
+FIC    		CMP   A, $03         
+		BEQ   FOUR           
+		BRA   FC             
+FOUR  		LDA   B, $0F         
+FC    		CMP   A, $02         
+		BEQ   THREE          
+		BRA   THC            
+THREE  		LDA   B, $07         
+THC    		CMP   A, $01         
+		BEQ   TWO            
+		BRA   TC             
+TWO   		LDA   B, $03         
+TC     		CMP   A, $00         
+		BEQ   ONE            
+		BRA   LIGHT          
+ONE    		LDA   B, $01         
+LIGHT  		YAZ   B, <ÝSKELE.B>  
+		LDA   A, <$2000>     
+		AND   A, $18         
+		MOV   D, A           
+		LDA   A, <$2000>     
+		AND   A, $E0         
+		LSR   A 
+		LSR   A 
+		LSR   A             
+		LSR   A              
+		LSR   A
+		INC	A              
+SHRO   		CMP   D, $00         
+		BEQ   RIRO           
+		BRA   RRC            
+RIRO   		ROR   B              
+RRC    		CMP   D, $08         
+		BEQ   LERO           
+		BRA   LRC            
+LERO   		ROL   B              
+LRC    		CMP   D, $10         
+		BEQ   RISH           
+		BRA   RSC            
+RISH   		LSR   B              
+RSC    		CMP   D, $18         
+		BEQ   LESH           
+		BRA   LSC            
+LESH   		LSL   B              
+LSC    		YAZ   B, <ÝSKELE.B>  
+		DEC   A
+		CMP 	A, $00             
+		BNE   SHRO           
+		KES           
+
+
